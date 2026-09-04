@@ -1,0 +1,7 @@
+# Seeds for failure cases proptest has generated in the past. It is
+# automatically read and these particular cases re-run before any
+# novel cases are generated.
+#
+# It is recommended to check this file in to source control so that
+# everyone who runs the test benefits from these saved cases.
+cc 4c806f3cfc799aa644782904289936f66c9e9284f205d31e997a32429ff23794 # shrinks to cmds = [(0, Insert { pos: 0, ch: 'A' })], order_keys = [[], [], []]

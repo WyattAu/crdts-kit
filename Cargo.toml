@@ -1,0 +1,34 @@
+[package]
+name = "crdts-kit"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.85"
+license = "MIT OR Apache-2.0"
+description = "CRDT toolkit — RGA replicated string with tombstones, participant presence, serde + wasm support"
+repository = "https://github.com/WyattAu/crdts-kit"
+readme = "README.md"
+keywords = ["crdt", "rga", "collaborative", "replicated"]
+categories = ["concurrency", "data-structures"]
+
+[dependencies]
+serde = { version = "1", features = ["derive"], optional = true }
+serde_json = { version = "1", optional = true }
+uuid = { version = "1", features = ["v4"], optional = true }
+
+[dev-dependencies]
+proptest = "1"
+
+[features]
+default = ["std", "uuid"]
+std = []
+# Random `DocumentId::new()` via uuid v4. Uses `getrandom`, which requires an
+# application-configured backend on wasm32-unknown-unknown (RUSTFLAGS
+# `--cfg getrandom_backend=...`); wasm builds typically opt out with
+# `default-features = false` and generate ids another way.
+uuid = ["dep:uuid"]
+# Serialization for all CRDT types and operations.
+serde = ["dep:serde", "dep:serde_json", "uuid?/serde"]
+# wasm32 target compatibility flag. The CRDT logic is pure and host-free;
+# combine with `default-features = false` so the random-id uuid/getrandom
+# dependency is excluded from wasm builds.
+wasm = []
