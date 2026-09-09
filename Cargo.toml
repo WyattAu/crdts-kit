@@ -36,3 +36,7 @@ serde = ["dep:serde", "dep:serde_json", "uuid?/serde"]
 # combine with `default-features = false` so the random-id uuid/getrandom
 # dependency is excluded from wasm builds.
 wasm = []
+
+[lints.clippy]
+unwrap_used = "warn"
+expect_used = "warn"
