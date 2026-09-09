@@ -309,6 +309,7 @@ impl fmt::Display for RgaString {
 
 #[cfg(test)]
 mod tests {
+    #![allow(clippy::unwrap_used, clippy::expect_used)] // test assertions unwrap by design
     use super::*;
 
     #[test]

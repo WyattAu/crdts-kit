@@ -47,6 +47,8 @@
 //! - `wasm` — documentation flag for `wasm32` target compatibility; the CRDT
 //!   logic is pure and host-free
 
+// Test code asserts invariants directly; unwrap/expect keeps failures loud.
+#![cfg_attr(test, allow(clippy::unwrap_used, clippy::expect_used))]
 #![forbid(unsafe_code)]
 #![deny(missing_docs)]
 
