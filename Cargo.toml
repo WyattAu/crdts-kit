@@ -9,6 +9,7 @@ repository = "https://github.com/WyattAu/crdts-kit"
 readme = "README.md"
 keywords = ["crdt", "rga", "collaborative", "replicated"]
 categories = ["concurrency", "data-structures"]
+exclude = ["/target"]
 
 [dependencies]
 serde = { version = "1", features = ["derive"], optional = true }
