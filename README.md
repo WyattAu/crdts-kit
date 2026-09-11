@@ -1,5 +1,9 @@
 # crdts-kit
 
+[![docs.rs](https://docs.rs/crdts-kit/badge.svg)](https://docs.rs/crdts-kit)
+[![crates.io](https://img.shields.io/crates/v/crdts-kit.svg)](https://crates.io/crates/crdts-kit)
+[![License](https://img.shields.io/badge/license-MIT%2FApache--2.0-blue.svg)](LICENSE)
+
 CRDT toolkit for Rust — an RGA (Replicated Growable Array) replicated string with tombstones, participant presence, and convergence properties suitable for real-time collaborative editing.
 
 ```toml

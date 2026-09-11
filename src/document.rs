@@ -1,6 +1,6 @@
 //! Collaborative document wrapper.
 //!
-//! [`CrdtDocument`] pairs an [`RgaString`](crate::text::RgaString) with a
+//! [`CrdtDocument`] pairs an [`RgaString`] with a
 //! [`DocumentId`], a monotonically increasing `version`, and a participant
 //! registry, providing the session-level API for collaborative editing.
 
