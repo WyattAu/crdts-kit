@@ -53,6 +53,14 @@ crdts-kit = { version = "0.1", default-features = false, features = ["std", "ser
 
 `#![forbid(unsafe_code)]`.
 
+## Stability
+
+`crdts-kit` is 1.0. Breaking changes require a minor bump and a `#[deprecated]`
+window of at least one minor release; MSRV bumps are minor releases, never
+patch releases. Convergence behaviour is contractual: documents mutated only by
+1.x releases converge identically on every 1.x replica. New CRDT types and
+optional serialization fields may arrive in minors.
+
 ## License
 
 MIT OR Apache-2.0
